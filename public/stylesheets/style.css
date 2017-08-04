@@ -1,0 +1,18 @@
+body{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}
+a{color:#00B7FF;text-decoration:none;}
+.container{width:80%;margin:0 auto;}
+.my-table{border-collapse:collapse;border:1px solid #d9d9d9;width:100%}
+.my-table tr td{padding:15px;border:1px solid #d9d9d9;}
+.my-table tr:nth-child(2n){background: #f3faff}
+.my-table tr:not(:first-child):hover{background: #f1f1f1}
+.thead{background:#3498db;color:#fff;}
+.del,.update{margin:0 5px;border-radius:0.25em;height:32px;line-height:32px;background:#5cb85c;color:#fff;display:inline-block;padding:0 15px;}
+.del:hover{background:#bf3834;}
+.update:hover{background:#3fa73f;}
+.del{background:#d9534f;}
+.button{border-radius:0.25em;height:36px;line-height:36px;background:#337ab7;color:#fff;display:inline-block;padding:0 15px;margin:10px 0;border:none;cursor:pointer;}
+.button:hover{background-color:#28689e}
+.operation{text-align:left}
+.input_text{height:36px;line-height:36px;border:1px solid #d9d9d9;padding:0 3px;width:100%;box-sizing:border-box;}
+.text-right{text-align:right;width:15%}
+.text-center{text-align:center;}

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	div.container
+		h1 #{title}
+		table.my-table
+			form(action='/user/list',method='post')
+				if(id)
+					input(type='hidden',placeholder='',name="userId",value=id)
+				each item in user
+					tr
+						td.text-right 姓名：
+						td
+							input(type='text',placeholder='',class='input_text',name="userName",value=item.name)
+					tr
+						td.text-right 姓别：
+						td
+							input(type='text',placeholder='',class='input_text',name="userMale",value=item.male)
+					tr
+						td.text-right 年龄：
+						td
+							input(type='text',placeholder='',class='input_text',name="userAge",value=item.age)
+					tr
+						td.text-right 职业：
+						td
+							input(type='text',placeholder='',class='input_text',name="userWork",value=item.work)
+					tr
+						td.text-right 住址：
+						td
+							input(type='text',placeholder='',class='input_text',name="userAddress",value=item.address)
+					tr
+						td.text-right  
+						td
+							button.button(type='submit',style="margin:0") 保存

@@ -1,0 +1,48 @@
+extends layout
+
+block content
+	div.container
+		h1 Welcome to #{title}
+		table.my-table
+			tr.thead 
+				td.text-center 序号
+				td 姓名
+				td.text-center 姓别
+				td.text-center 时间 
+				td.text-center 年龄
+				td 职业
+				td 住址
+				td.text-center 操作
+			each item,i in users
+				tr
+					td.text-center #{i+1}
+					td #{item.name}
+					td.text-center #{item.male}
+					td.text-center #{moment(item.time).format('MM-DD-YYYY')}
+					td.text-center #{item.age}
+					td #{item.work}
+					td #{item.address}
+					td.text-center
+						a(href='javascript:;',data-id='#{item.id}',class='del',onclick='del(this)') 删除
+						a(href='/user/update/#{item.id}',class='update') 更新
+		div.operation
+			a.button(href='/user/add') 添加用户
+	script(src='//cdn.bootcss.com/jquery/3.2.1/jquery.min.js')
+	script.
+		function del(e){
+			var id = $(e).data('id');
+			var tr = $(e).parents("tr");		 
+			$.ajax({
+				type: 'POST',
+				url: '/user/del' + "?id=" + id,
+				success: function(res){
+					if (res.success == 1) {
+						if (tr.length > 0) {
+							tr.remove();
+						}
+					}else{
+						alert('删除失败');
+					}
+				}
+			})
+		}
