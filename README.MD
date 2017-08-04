@@ -1,4 +1,4 @@
-## Nodejs + Express + MySql + Gulp
+## Nodejs + Express + MySql + Gulp 增删改查
 ### 如何执行
 ####  1、将项目克隆到本地，cd到目录
 ```javascript
