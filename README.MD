@@ -2,7 +2,7 @@
 ### 如何执行
 ####  1、将项目克隆到本地，cd到目录
 ```javascript
-git clone git@github.com:chenjun1127/NodeJs-MySql.git
+git clone git@github.com:chenjun1127/nodejs-mysql.git
 cd nodejs-mysql
 ```
 #### 2、安装依赖
